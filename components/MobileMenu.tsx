@@ -224,7 +224,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
               {/* Footer - properly positioned at bottom */}
               <div className="p-4 border-t border-ph-800/50 bg-ph-950">
                 <motion.a
-                  href="#lead-form"
+                  href="/login"
                   className="block w-full py-3 px-4 text-center font-semibold rounded-lg bg-ph-600 text-white hover:bg-ph-500 transition-colors"
                   onClick={onClose}
                   whileHover={{ scale: 1.03 }}

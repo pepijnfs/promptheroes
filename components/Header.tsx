@@ -71,7 +71,7 @@ const Header = () => {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-              <a href="#lead-form" className="px-5 py-2.5 text-sm font-bold bg-ph-600 hover:bg-ph-500 text-white rounded-lg transition-all">
+              <a href="/login" className="px-5 py-2.5 text-sm font-bold bg-ph-600 hover:bg-ph-500 text-white rounded-lg transition-all">
                 Log in
               </a>
             </motion.div>
