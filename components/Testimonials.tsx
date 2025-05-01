@@ -8,7 +8,7 @@ const testimonials = [
     name: "Alex Thompson",
     role: "Senior Software Developer",
     company: "TechCorp",
-    testimonial: "De Cursor AI training van Prompt Heroes heeft revolutionair veranderd hoe ons team werkt. We schrijven betere code in minder tijd, met een 60% vermindering in debug-uren.",
+    testimonial: "De Cursor AI training van Prompt Pilot heeft revolutionair veranderd hoe ons team werkt. We schrijven betere code in minder tijd, met een 60% vermindering in debug-uren.",
     rating: 5
   },
   {

@@ -84,7 +84,7 @@ const Footer = () => {
               </li>
               <li className="text-white/70 mt-4">
                 <address className="not-italic">
-                  Prompt Heroes<br />
+                  Prompt Pilot<br />
                   Stationsplein 45<br />
                   3013 AK Rotterdam<br />
                   Nederland
@@ -96,7 +96,7 @@ const Footer = () => {
         
         <div className="mt-16 pt-8 border-t border-ph-800/30 flex flex-col md:flex-row justify-between items-center">
           <p className="text-white/50 text-sm mb-4 md:mb-0">
-            © {currentYear} Prompt Heroes. Alle rechten voorbehouden.
+            © {currentYear} Prompt Pilot. Alle rechten voorbehouden.
           </p>
           <div className="flex space-x-6">
             <a href="#" className="text-white/50 hover:text-ph-600 text-sm transition-colors">

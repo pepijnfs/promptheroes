@@ -17,7 +17,7 @@ This document explains how to set up a Telegram bot to receive chat messages fro
 3. Start a chat with BotFather
 4. Send the command: `/newbot`
 5. Follow the instructions to name your bot
-   - First provide a display name (e.g., "Prompt Heroes Chat")
+   - First provide a display name (e.g., "Prompt Pilot Chat")
    - Then provide a username (must end in "bot", e.g., "prompt_heroes_chat_bot")
 6. Once created, BotFather will give you an HTTP API token (a long string like `123456789:ABCdefGhIJKlmNoPQRsTUVwxyZ`)
 7. **Save this token** - you'll need it for the ChatWidget component

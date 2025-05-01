@@ -14,7 +14,7 @@ This guide explains how to use the two-way chat system that allows you to reply 
 When you receive a message in Telegram, it will look like this:
 
 ```
-💬 New chat message from Prompt Heroes website:
+💬 New chat message from Prompt Pilot website:
 
 "Hello, I have a question about AI training"
 

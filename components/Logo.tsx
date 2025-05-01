@@ -35,7 +35,7 @@ const Logo = ({
       <div style={{ height: `${height}px` }} className="w-auto relative">
         <Image 
           src={logoIcon}
-          alt="Prompt Heroes Logo - AI Trainingen voor Developers"
+          alt="Prompt Pilot Logo - AI Trainingen voor Developers"
           width={width}
           height={height}
           className="h-full w-auto"
@@ -48,7 +48,7 @@ const Logo = ({
       </div>
       {showText && (
         <span className={`font-bold ${textSizeClasses[textSize]}`}>
-          <span>Prompt Heroes</span>
+          <span>Prompt Pilot</span>
         </span>
       )}
     </div>

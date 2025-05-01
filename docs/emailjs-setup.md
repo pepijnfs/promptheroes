@@ -29,7 +29,7 @@ This document explains how to set up EmailJS to forward chat messages to your em
 Example template:
 
 ```html
-<h2>New Chat Message from Prompt Heroes Website</h2>
+<h2>New Chat Message from Prompt Pilot Website</h2>
 <p><strong>Message:</strong> {{message}}</p>
 <p><strong>Sent from:</strong> {{website_url}}</p>
 <p><strong>Time:</strong> {{timestamp}}</p>

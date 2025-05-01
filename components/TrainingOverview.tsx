@@ -69,7 +69,7 @@ const TrainingOverview = () => {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
-              Wat <span className="text-ph-600">leer</span> je bij Prompt Heroes?
+              Wat <span className="text-ph-600">leer</span> je bij Prompt Pilot?
             </h2>
             <p className="text-white/70 max-w-2xl mx-auto">
               Een complete training in het effectief gebruiken van AI EDI&apos;s voor programmeren.

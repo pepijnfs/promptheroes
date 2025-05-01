@@ -199,7 +199,7 @@ const ChatWidget = () => {
       
       // Format the message with additional information
       const formattedMessage = 
-        `💬 New chat from Prompt Heroes website:\n\n` +
+        `💬 New chat from Prompt Pilot website:\n\n` +
         `"${message}"\n\n` +
         `📱 From: ${window.location.href}\n` +
         `⏰ Time: ${new Date().toLocaleString()}\n` +
