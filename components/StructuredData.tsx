@@ -1,5 +1,3 @@
-import { Metadata } from 'next'
-
 export default function StructuredData() {
   const organizationSchema = {
     "@context": "https://schema.org",

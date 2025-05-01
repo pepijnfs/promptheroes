@@ -25,7 +25,9 @@ const ChatWidget = () => {
   const [activeView, setActiveView] = useState('home') // 'home' or 'messages'
   const messagesEndRef = useRef<HTMLDivElement>(null)
   const [hasShownWelcome, setHasShownWelcome] = useState(false)
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [isWaitingForEmail, setIsWaitingForEmail] = useState(false)
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [detectedTopic, setDetectedTopic] = useState<string | null>(null)
   const [conversationStage, setConversationStage] = useState('initial') // 'initial', 'answered', 'waiting_for_email'
   const pollIntervalRef = useRef<NodeJS.Timeout | null>(null)
