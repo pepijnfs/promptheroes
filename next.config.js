@@ -50,7 +50,6 @@ const nextConfig = {
     ];
   },
   experimental: {
-    optimizeCss: true,
     optimizePackageImports: [
       '@heroicons/react',
       'framer-motion',
