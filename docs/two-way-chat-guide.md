@@ -18,7 +18,7 @@ When you receive a message in Telegram, it will look like this:
 
 "Hello, I have a question about AI training"
 
-📱 From: https://promptheroes.com/
+📱 From: https://promptpilot.nlm/
 ⏰ Time: 6/15/2023, 2:30:45 PM
 🆔 Session ID: abc123def456
 

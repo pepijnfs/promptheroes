@@ -1,0 +1,13 @@
+# robots.txt for promptpilot.nl
+User-agent: *
+Allow: /
+
+# Block admin or private areas
+Disallow: /admin/
+Disallow: /login/
+Disallow: /dashboard/
+Disallow: /api/
+Disallow: /private/
+
+# Sitemap
+Sitemap: https://promptpilot.nl/sitemap.xml 

@@ -42,12 +42,12 @@ const TrainingCard: React.FC<TrainingCardProps> = ({
       <div className="relative w-full h-48 bg-ph-800">
         <Image
           src={imageSrc}
-          alt={title}
+          alt={`${title} - ${subtitle}`}
           fill
           className="object-cover"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
           priority={index < 2}
-          unoptimized
+          quality={90}
         />
         {isComingSoon && (
           <div className="absolute top-3 right-3 bg-ph-600 text-white text-xs font-semibold py-1 px-2 rounded">

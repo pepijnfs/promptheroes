@@ -33,7 +33,7 @@ const Footer = () => {
               </p>
               <div className="flex space-x-4">
                 <a 
-                  href="https://linkedin.com/company/promptheroes" 
+                  href="https://linkedin.com/company/promptpilot" 
                   className="text-white/70 hover:text-ph-600 transition-colors"
                   aria-label="LinkedIn"
                   target="_blank"
@@ -77,7 +77,7 @@ const Footer = () => {
             <h3 className="text-lg font-semibold text-white mb-4">Contact</h3>
             <ul className="space-y-2">
               <li className="text-white/70">
-                <a href="mailto:hello@promptheroes.com" className="text-ph-600 hover:text-ph-500 transition-colors">hello@promptheroes.co</a>
+                <a href="mailto:hello@promptpilot.nlm" className="text-ph-600 hover:text-ph-500 transition-colors">hello@promptpilot.nl</a>
               </li>
               <li className="text-white/70">
                 <a href="tel:+31624798648" className="text-ph-600 hover:text-ph-500 transition-colors">+31 6 24798648</a>

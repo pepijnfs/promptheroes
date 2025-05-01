@@ -1,6 +1,4 @@
-'use client'
-
-import { useState, useEffect } from 'react'
+import dynamic from 'next/dynamic'
 import Header from '@/components/Header'
 import HeroSection from '@/components/HeroSection'
 import WhyAISection from '@/components/WhyAISection'
@@ -14,17 +12,13 @@ import Testimonials from '@/components/Testimonials'
 import LeadForm from '@/components/LeadForm'
 import FAQ from '@/components/FAQ'
 import Footer from '@/components/Footer'
-import ChatWidget from '@/components/ChatWidget'
+
+// Dynamically import ChatWidget with no SSR
+const ChatWidget = dynamic(() => import('@/components/ChatWidget'), {
+  ssr: false
+})
 
 export default function Home() {
-  const [mounted, setMounted] = useState(false)
-
-  useEffect(() => {
-    setMounted(true)
-  }, [])
-
-  if (!mounted) return null
-
   return (
     <main className="flex min-h-screen flex-col overflow-hidden">
       <Header />

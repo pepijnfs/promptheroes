@@ -72,7 +72,7 @@ const HeroSection = () => {
             transition={{ duration: 0.8 }}
             className="mb-8"
           >
-            <h1 className="h1">
+            <h1 className="h1 min-h-[80px]">
               <span className="text-white">Krijg tot </span>
               <span className="text-ph-600">30%*</span>
               <span className="text-white"> meer gedaan, zonder extra developers aan te nemen</span>
@@ -85,7 +85,7 @@ const HeroSection = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="mb-12"
           >
-            <p className="text-body-lg text-white/80 max-w-2xl">
+            <p className="text-body-lg text-white/80 max-w-2xl min-h-[72px]">
               Blijf niet achter. Zet AI vandaag nog in om je development team productiever te maken.
             </p>
           </motion.div>
@@ -94,7 +94,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
-            className="flex flex-col sm:flex-row gap-4 mb-16 w-full sm:w-auto"
+            className="flex flex-col sm:flex-row gap-4 mb-16 w-full sm:w-auto min-h-[120px]"
           >
             <div className="w-full sm:w-auto">
               <PrimaryButton 
@@ -117,7 +117,7 @@ const HeroSection = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.8 }}
-            className="mt-8 w-full"
+            className="mt-8 w-full min-h-[120px]"
           >
             <p className="text-caption mb-6 text-center">Vertrouwd door</p>
             <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12">

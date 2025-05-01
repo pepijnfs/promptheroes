@@ -35,11 +35,15 @@ const Logo = ({
       <div style={{ height: `${height}px` }} className="w-auto relative">
         <Image 
           src={logoIcon}
-          alt="Prompt Heroes Logo"
+          alt="Prompt Heroes Logo - AI Trainingen voor Developers"
           width={width}
           height={height}
           className="h-full w-auto"
           priority={true}
+          quality={100}
+          loading="eager"
+          sizes="(max-width: 768px) 100px, 150px"
+          placeholder="blur"
         />
       </div>
       {showText && (

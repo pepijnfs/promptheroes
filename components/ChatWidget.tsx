@@ -25,12 +25,10 @@ const ChatWidget = () => {
   const [activeView, setActiveView] = useState('home') // 'home' or 'messages'
   const messagesEndRef = useRef<HTMLDivElement>(null)
   const [hasShownWelcome, setHasShownWelcome] = useState(false)
-  // Properly handle unused variables with ESLint disable
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [isWaitingForEmail, setIsWaitingForEmail] = useState(false)
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [detectedTopic, setDetectedTopic] = useState<string | null>(null)
   const [conversationStage, setConversationStage] = useState('initial') // 'initial', 'answered', 'waiting_for_email'
+  const pollIntervalRef = useRef<NodeJS.Timeout | null>(null)
 
   // Business phone number for WhatsApp (replace with your actual number)
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -54,17 +52,21 @@ const ChatWidget = () => {
   
   // Initialize session ID and EmailJS
   useEffect(() => {
-    // Initialize EmailJS
     if (typeof window !== 'undefined') {
       emailjs.init(EMAILJS_PUBLIC_KEY)
       
-      // Get or create session ID
       let existingSessionId = localStorage.getItem('chat_session_id')
       if (!existingSessionId) {
         existingSessionId = uuidv4()
         localStorage.setItem('chat_session_id', existingSessionId)
       }
       setSessionId(existingSessionId)
+    }
+
+    return () => {
+      if (pollIntervalRef.current) {
+        clearInterval(pollIntervalRef.current)
+      }
     }
   }, [])
   
@@ -80,7 +82,6 @@ const ChatWidget = () => {
         if (response.ok) {
           const data = await response.json()
           if (data.messages && data.messages.length > 0) {
-            // Add new messages to the chat
             const newMessages = data.messages.map((msg: {message: string, sender: string, timestamp: string}) => ({
               text: msg.message,
               sender: msg.sender,
@@ -89,7 +90,6 @@ const ChatWidget = () => {
             
             setMessages(prev => [...prev, ...newMessages])
             
-            // Update last check timestamp
             const latestMessage = data.messages.reduce((latest: {timestamp: string}, msg: {timestamp: string}) => 
               new Date(msg.timestamp) > new Date(latest.timestamp) ? msg : latest
             , data.messages[0])
@@ -102,11 +102,14 @@ const ChatWidget = () => {
       }
     }
     
-    // Check immediately and then every 5 seconds
     checkForNewMessages()
-    const interval = setInterval(checkForNewMessages, 5000)
+    pollIntervalRef.current = setInterval(checkForNewMessages, 5000)
     
-    return () => clearInterval(interval)
+    return () => {
+      if (pollIntervalRef.current) {
+        clearInterval(pollIntervalRef.current)
+      }
+    }
   }, [sessionId, lastCheckTimestamp, isOpen])
 
   // Show welcome message when messages view is opened

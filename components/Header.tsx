@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { motion } from 'framer-motion'
 import Logo from './Logo'
 import { Bars3Icon } from '@heroicons/react/20/solid'
@@ -15,17 +15,22 @@ export const navigationItems = [
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const bodyOverflowRef = useRef<string | null>(null)
 
-  // Prevent scrolling when mobile menu is open
+  // Handle body overflow in a bfcache-friendly way
   useEffect(() => {
     if (mobileMenuOpen) {
+      // Store current overflow value
+      bodyOverflowRef.current = document.body.style.overflow
       document.body.style.overflow = 'hidden'
     } else {
-      document.body.style.overflow = ''
+      // Restore previous overflow value
+      document.body.style.overflow = bodyOverflowRef.current || ''
     }
     
     return () => {
-      document.body.style.overflow = ''
+      // Cleanup: restore original overflow value
+      document.body.style.overflow = bodyOverflowRef.current || ''
     }
   }, [mobileMenuOpen])
 

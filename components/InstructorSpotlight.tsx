@@ -102,9 +102,13 @@ const InstructorSpotlight = () => {
               >
                 <Image
                   src={pepijnImage}
-                  alt="Pepijn Steijger"
+                  alt="Pepijn Steijger - AI Consultant & Specialist"
                   fill
                   className="object-cover rounded-full"
+                  quality={100}
+                  sizes="(max-width: 768px) 320px, 400px"
+                  priority={true}
+                  placeholder="blur"
                 />
               </div>
               
@@ -184,14 +188,13 @@ const InstructorSpotlight = () => {
             </h2>
             
             <p className="text-ph-800 mb-6">
-              Pepijn is een ervaren AI prompt-engineer en expert in AI-ondersteunde ontwikkeling met meer dan tien jaar ervaring in marketing, development en AI. Hij heeft tientallen developers geholpen hun workflow te transformeren met tools als Cursor, Copilot, Windsurf en meer.
+              Pepijn is een ervaren AI prompt-engineer en expert in AI-ondersteund programmeren met meer dan tien jaar ervaring in marketing en AI. Hij heeft tientallen developers geholpen hun workflow te transformeren met tools als Cursor, Copilot, Windsurf en meer.
             </p>
             
             <div className="flex flex-wrap gap-3 mb-8">
-              <div className="bg-ph-100 border border-ph-200 px-3 py-1 rounded-md text-sm text-ph-800">AI Consultant</div>
-              <div className="bg-ph-100 border border-ph-200 px-3 py-1 rounded-md text-sm text-ph-800">Senior Developer</div>
               <div className="bg-ph-100 border border-ph-200 px-3 py-1 rounded-md text-sm text-ph-800">AI Specialist</div>
-              <div className="bg-ph-100 border border-ph-200 px-3 py-1 rounded-md text-sm text-ph-800">Tech Auteur</div>
+              <div className="bg-ph-100 border border-ph-200 px-3 py-1 rounded-md text-sm text-ph-800">Senior Marketeer</div>
+              <div className="bg-ph-100 border border-ph-200 px-3 py-1 rounded-md text-sm text-ph-800">Trainer</div>
             </div>
             
             <div className="bg-ph-100 border border-ph-200 p-5 rounded-lg shadow-sm">

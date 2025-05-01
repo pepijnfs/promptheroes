@@ -34,7 +34,7 @@ const LoginForm = () => {
             type="email"
             id="email"
             className="ph-input"
-            placeholder="hello@promptheroes.co"
+            placeholder="hello@promptpilot.nl"
             disabled
           />
         </div>

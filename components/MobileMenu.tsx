@@ -102,7 +102,9 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
     }
 
     document.addEventListener('keydown', handleEscape)
-    return () => document.removeEventListener('keydown', handleEscape)
+    return () => {
+      document.removeEventListener('keydown', handleEscape)
+    }
   }, [isOpen, onClose])
 
   // Trap focus inside menu when open
@@ -112,24 +114,18 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
     const menuElement = menuRef.current
     if (!menuElement) return
     
-    // Focus the close button when menu opens
     closeButtonRef.current?.focus()
     
-    // Get all focusable elements inside menu
     const focusableElements = menuElement.querySelectorAll('a[href], button, input, textarea, select, [tabindex]:not([tabindex="-1"])')
     const firstElement = focusableElements[0] as HTMLElement
     const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement
     
     const handleTab = (e: KeyboardEvent) => {
-      // If tab key is pressed
       if (e.key === 'Tab') {
-        // If shift + tab on first element, move to last element
         if (e.shiftKey && document.activeElement === firstElement) {
           e.preventDefault()
           lastElement.focus()
-        }
-        // If tab on last element, move to first element
-        else if (!e.shiftKey && document.activeElement === lastElement) {
+        } else if (!e.shiftKey && document.activeElement === lastElement) {
           e.preventDefault()
           firstElement.focus()
         }
@@ -137,8 +133,6 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
     }
 
     document.addEventListener('keydown', handleTab)
-    
-    // Prevent scrolling of body when menu is open - removed as this is handled in Header.tsx
     
     return () => {
       document.removeEventListener('keydown', handleTab)
