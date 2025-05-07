@@ -44,18 +44,15 @@ const RelatedTrainings: React.FC<RelatedTrainingsProps> = ({
         
         {/* Trainings Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {relatedTrainings.map((training, index) => (
+          {relatedTrainings.map(training => (
             <TrainingCard
               key={training.id}
-              index={index} 
               title={training.title}
-              subtitle={training.subtitle}
-              imageSrc={training.imageSrc}
-              date={training.date}
+              description={training.subtitle}
               duration={training.duration}
-              location={training.location}
+              price="€2.500"
+              slug={training.id}
               isComingSoon={training.isComingSoon}
-              trainingId={training.id}
             />
           ))}
         </div>
