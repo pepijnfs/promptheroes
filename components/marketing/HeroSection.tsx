@@ -2,8 +2,8 @@
 
 import React from 'react'
 import { motion } from 'framer-motion'
-import PrimaryButton from './PrimaryButton'
-import SecondaryButton from './SecondaryButton'
+import PrimaryButton from '../common/PrimaryButton'
+import SecondaryButton from '../common/SecondaryButton'
 import Image from 'next/image'
 
 const styles = `

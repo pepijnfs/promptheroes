@@ -515,14 +515,14 @@ const ProblemSolution = () => {
                       <h4 className="text-lg font-medium text-ph-300 mb-2">
                         Het probleem:
                       </h4>
-                      <p className="text-white/80">{currentUseCase.problem}</p>
+                      <p className="text-ph-300">{currentUseCase.problem}</p>
                     </div>
 
                     <div>
                       <h4 className="text-lg font-medium text-ph-300 mb-2">
                         De oplossing:
                       </h4>
-                      <p className="text-white/80">{currentUseCase.solution}</p>
+                      <p className="text-ph-300">{currentUseCase.solution}</p>
                     </div>
                     </div>
                   </motion.div>
@@ -570,7 +570,7 @@ const ProblemSolution = () => {
                         <div className="flex-shrink-0 w-8 h-8 rounded-full bg-ph-800/50 flex items-center justify-center text-white text-sm font-bold">
                           U
                         </div>
-                        <div className="bg-ph-800/70 px-4 py-3 rounded-lg text-sm text-white/80">
+                        <div className="bg-ph-800/70 px-4 py-3 rounded-lg text-sm text-ph-300">
                           {currentUseCase.userPrompt}
                         </div>
                       </div>
@@ -579,7 +579,7 @@ const ProblemSolution = () => {
                         <div className="flex-shrink-0 w-8 h-8 rounded-full bg-ph-600/30 flex items-center justify-center text-white text-sm font-bold">
                           AI
                         </div>
-                        <div className="bg-ph-800/70 px-4 py-3 rounded-lg text-sm text-white/80">
+                        <div className="bg-ph-800/70 px-4 py-3 rounded-lg text-sm text-ph-300">
                           {currentUseCase.aiResponse}
                         </div>
                       </div>
@@ -588,7 +588,7 @@ const ProblemSolution = () => {
                         <div className="flex-shrink-0 w-8 h-8 rounded-full bg-ph-600/30 flex items-center justify-center text-white text-sm font-bold">
                           AI
                         </div>
-                        <div className="bg-ph-800/70 px-4 py-3 rounded-lg text-sm text-white/80 font-mono relative overflow-hidden w-full">
+                        <div className="bg-ph-800/70 px-4 py-3 rounded-lg text-sm text-ph-300 font-mono relative overflow-hidden w-full">
                           <pre className="whitespace-pre-wrap">
                             {displayedCodeText}
                           </pre>

@@ -10,8 +10,8 @@ import {
   MapPinIcon,
   ArrowPathIcon
 } from '@heroicons/react/24/solid'
-import PrimaryButton from './PrimaryButton'
-import SecondaryButton from './SecondaryButton'
+import PrimaryButton from '../common/PrimaryButton'
+import SecondaryButton from '../common/SecondaryButton'
 
 type FormData = {
   name: string

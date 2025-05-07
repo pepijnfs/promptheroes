@@ -75,19 +75,19 @@ const TrainingBenefits: React.FC<TrainingBenefitsProps> = ({ training }) => {
               <ul className="space-y-3">
                 <li className="flex items-center">
                   <span className="w-3 h-3 bg-ph-600 rounded-full mr-3"></span>
-                  <span className="text-white/80">Sneller code produceert</span>
+                  <span className="text-ph-300">Sneller code produceert</span>
                 </li>
                 <li className="flex items-center">
                   <span className="w-3 h-3 bg-ph-600 rounded-full mr-3"></span>
-                  <span className="text-white/80">Minder bugs introduceert</span>
+                  <span className="text-ph-300">Minder bugs introduceert</span>
                 </li>
                 <li className="flex items-center">
                   <span className="w-3 h-3 bg-ph-600 rounded-full mr-3"></span>
-                  <span className="text-white/80">Meer tijd heeft voor innovatie</span>
+                  <span className="text-ph-300">Meer tijd heeft voor innovatie</span>
                 </li>
                 <li className="flex items-center">
                   <span className="w-3 h-3 bg-ph-600 rounded-full mr-3"></span>
-                  <span className="text-white/80">Complexe problemen sneller oplost</span>
+                  <span className="text-ph-300">Complexe problemen sneller oplost</span>
                 </li>
               </ul>
               

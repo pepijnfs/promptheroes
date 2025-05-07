@@ -2,7 +2,7 @@
 
 import React from 'react'
 import { motion } from 'framer-motion'
-import SecondaryButton from './SecondaryButton'
+import SecondaryButton from '../common/SecondaryButton'
 
 const FinalCTA = () => {
   return (

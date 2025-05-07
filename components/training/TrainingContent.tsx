@@ -69,7 +69,7 @@ const TrainingContent: React.FC<TrainingContentProps> = ({ training }) => {
               <h3 className="text-xl font-bold mb-4 text-white">{section.title}</h3>
               <ul className="space-y-3">
                 {section.items.map((item, itemIndex) => (
-                  <li key={itemIndex} className="flex items-start text-white/80">
+                  <li key={itemIndex} className="flex items-start text-ph-300">
                     <CheckCircleIcon className="h-5 w-5 mr-3 mt-0.5 text-ph-600 flex-shrink-0" />
                     <span>{item}</span>
                   </li>

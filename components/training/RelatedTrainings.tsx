@@ -50,7 +50,8 @@ const RelatedTrainings: React.FC<RelatedTrainingsProps> = ({
               title={training.title}
               description={training.subtitle}
               duration={training.duration}
-              price="€2.500"
+              date={training.date}
+              location={training.location}
               slug={training.id}
               isComingSoon={training.isComingSoon}
             />

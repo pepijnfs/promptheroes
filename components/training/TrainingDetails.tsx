@@ -48,15 +48,15 @@ const TrainingDetails: React.FC<TrainingDetailsProps> = ({ training }) => {
           >
             <h3 className="text-xl font-bold mb-5 text-white">Praktische informatie</h3>
             <ul className="space-y-4">
-              <li className="flex items-center text-white/80">
+              <li className="flex items-center text-ph-300">
                 <CalendarIcon className="h-5 w-5 mr-2 text-ph-600" />
                 <span>{training.date}</span>
               </li>
-              <li className="flex items-center text-white/80">
+              <li className="flex items-center text-ph-300">
                 <ClockIcon className="h-5 w-5 mr-2 text-ph-600" />
                 <span>{training.duration}</span>
               </li>
-              <li className="flex items-center text-white/80">
+              <li className="flex items-center text-ph-300">
                 <MapPinIcon className="h-5 w-5 mr-2 text-ph-600" />
                 <span>{training.location}</span>
               </li>
@@ -72,15 +72,15 @@ const TrainingDetails: React.FC<TrainingDetailsProps> = ({ training }) => {
           >
             <h3 className="text-xl font-bold mb-5 text-white">Voor wie is deze training?</h3>
             <ul className="space-y-4">
-              <li className="flex items-center text-white/80">
+              <li className="flex items-center text-ph-300">
                 <UserGroupIcon className="h-5 w-5 mr-2 text-ph-600" />
                 <span>Ontwikkelaars en tech teams</span>
               </li>
-              <li className="flex items-center text-white/80">
+              <li className="flex items-center text-ph-300">
                 <AcademicCapIcon className="h-5 w-5 mr-2 text-ph-600" />
                 <span>Zowel beginners als ervaren professionals</span>
               </li>
-              <li className="flex items-center text-white/80">
+              <li className="flex items-center text-ph-300">
                 <BriefcaseIcon className="h-5 w-5 mr-2 text-ph-600" />
                 <span>Teams die hun productiviteit willen verhogen</span>
               </li>

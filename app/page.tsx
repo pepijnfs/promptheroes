@@ -1,42 +1,32 @@
 import dynamic from 'next/dynamic'
-import Header from '@/components/Header'
-import HeroSection from '@/components/HeroSection'
-import AIBenefitsSection from '@/components/AIBenefitsSection'
-import ProblemSolution from '@/components/ProblemSolution'
-import TrainingSection from '@/components/TrainingSection'
-import TrainingOverview from '@/components/TrainingOverview'
-import InstructorSpotlight from '@/components/InstructorSpotlight'
-import Testimonials from '@/components/Testimonials'
-import LeadForm from '@/components/LeadForm'
-import FAQ from '@/components/FAQ'
-import Footer from '@/components/Footer'
+import Header from '@/components/layout/Header'
+import HeroSection from '@/components/marketing/HeroSection'
+import AIBenefitsSection from '@/components/marketing/AIBenefitsSection'
+import ProblemSolution from '@/components/marketing/ProblemSolution'
+import TrainingSection from '@/components/training/TrainingSection'
+import TrainingOverview from '@/components/training/TrainingOverview'
+import Testimonials from '@/components/marketing/Testimonials'
+import LeadForm from '@/components/features/LeadForm'
+import FAQ from '@/components/marketing/FAQ'
+import Footer from '@/components/layout/Footer'
 
 // Dynamically import ChatWidget with no SSR
-const ChatWidget = dynamic(() => import('@/components/ChatWidget'), {
+const ChatWidget = dynamic(() => import('@/components/features/ChatWidget'), {
   ssr: false
 })
 
 export default function Home() {
   return (
-    <main className="flex min-h-scrbuttoneen flex-col overflow-hidden">
+    <main className="flex min-h-screen flex-col overflow-hidden bg-ph-950">
       <Header />
       <HeroSection />
       <AIBenefitsSection />
       <ProblemSolution />
-      <div className="bg-ph-900">
-        <TrainingOverview />
-        <TrainingSection />
-      </div>
-      <div className="bg-white">
-        <InstructorSpotlight />
-      </div>
-      <div className="bg-ph-900">
-        <Testimonials />
-      </div>
+      <TrainingSection />
+      <TrainingOverview />
+      <Testimonials />
       <LeadForm />
-      <div className="bg-ph-900">
-        <FAQ />
-      </div>
+      <FAQ />
       <Footer />
       <ChatWidget />
     </main>

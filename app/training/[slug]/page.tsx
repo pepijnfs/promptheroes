@@ -3,14 +3,14 @@
 import { useEffect, useState } from 'react';
 import { notFound } from 'next/navigation';
 import { getRelatedTrainings, getTrainingById, Training } from '@/services/trainingService';
-import Header from '@/components/Header';
-import TrainingHero from '@/components/TrainingHero';
-import TrainingContent from '@/components/TrainingContent';
-import TrainingBenefits from '@/components/TrainingBenefits';
-import LeadForm from '@/components/LeadForm';
-import RelatedTrainings from '@/components/RelatedTrainings';
-import Footer from '@/components/Footer';
-import ChatWidget from '@/components/ChatWidget';
+import Header from '@/components/layout/Header';
+import TrainingHero from '@/components/training/TrainingHero';
+import TrainingContent from '@/components/training/TrainingContent';
+import TrainingBenefits from '@/components/marketing/TrainingBenefits';
+import LeadForm from '@/components/features/LeadForm';
+import RelatedTrainings from '@/components/training/RelatedTrainings';
+import Footer from '@/components/layout/Footer';
+import ChatWidget from '@/components/features/ChatWidget';
 
 export default function TrainingPage({ params }: { params: { slug: string } }) {
   const [training, setTraining] = useState<Training | null>(null);

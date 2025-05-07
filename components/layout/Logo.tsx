@@ -2,7 +2,7 @@
 
 import { useEffect } from 'react'
 import Image from 'next/image'
-import logoIcon from './logo/ph-logo-icon.png'
+import logoIcon from '../logo/ph-logo-icon.png'
 
 interface LogoProps {
   className?: string
@@ -12,13 +12,13 @@ interface LogoProps {
   showText?: boolean
 }
 
-const Logo = ({ 
+const Logo: React.FC<LogoProps> = ({ 
   className = '', 
   width = 100,
   height = 24,
   textSize = 'lg',
   showText = true 
-}: LogoProps) => {
+}) => {
   useEffect(() => {
     // Force immediate state update for SSR and animation consistency
   }, [])

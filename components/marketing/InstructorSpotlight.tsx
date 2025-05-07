@@ -3,7 +3,7 @@
 import React, { useState, useRef, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
-import pepijnImage from '../components/logo/pepijn-steijger.jpeg'
+import pepijnImage from '../logo/pepijn-steijger.jpeg'
 
 // Calculate positions in a circle
 const NUM_POSITIONS = 8; // Number of positions around the circle

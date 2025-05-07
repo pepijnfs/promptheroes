@@ -4,8 +4,8 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import { CalendarIcon, ClockIcon, MapPinIcon } from '@heroicons/react/24/solid'
 import { Training } from '@/services/trainingService'
-import PrimaryButton from './PrimaryButton'
-import SecondaryButton from './SecondaryButton'
+import PrimaryButton from '@/components/common/PrimaryButton'
+import SecondaryButton from '@/components/common/SecondaryButton'
 
 type TrainingHeroProps = {
   training: Training
@@ -90,7 +90,7 @@ const TrainingHero: React.FC<TrainingHeroProps> = ({ training }) => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="mb-12"
           >
-            <p className="text-body-lg text-white/80 max-w-2xl">
+            <p className="text-body-lg text-ph-300 max-w-2xl">
               {training.subtitle}
             </p>
           </motion.div>
@@ -99,7 +99,7 @@ const TrainingHero: React.FC<TrainingHeroProps> = ({ training }) => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
-            className="flex flex-wrap justify-center gap-8 mb-12 text-white/80"
+            className="flex flex-wrap justify-center gap-8 mb-12 text-ph-300"
           >
             <div className="flex items-center">
               <CalendarIcon className="h-5 w-5 mr-2 text-ph-600" />
