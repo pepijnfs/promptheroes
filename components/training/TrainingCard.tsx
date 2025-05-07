@@ -3,8 +3,8 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { CalendarIcon, ClockIcon, MapPinIcon } from '@heroicons/react/24/solid'
-import PrimaryButton from '../common/PrimaryButton'
-import SecondaryButton from '../common/SecondaryButton'
+import PrimaryButton from '@/components/common/PrimaryButton'
+import SecondaryButton from '@/components/common/SecondaryButton'
 
 interface TrainingCardProps {
   title: string
