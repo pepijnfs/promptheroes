@@ -1,42 +1,35 @@
 'use client'
 
 import React from 'react'
-import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { CalendarIcon, ClockIcon, MapPinIcon } from '@heroicons/react/24/solid'
 import PrimaryButton from './PrimaryButton'
 import SecondaryButton from './SecondaryButton'
 
-export type TrainingCardProps = {
+interface TrainingCardProps {
   title: string
-  subtitle: string
-  imageSrc: string
-  date: string
+  description: string
   duration: string
-  location: string
+  price: string
+  slug: string
   isComingSoon?: boolean
-  index?: number
-  trainingId?: string
 }
 
 const TrainingCard: React.FC<TrainingCardProps> = ({
   title,
-  subtitle,
-  imageSrc,
-  date,
+  description,
   duration,
-  location,
-  isComingSoon = false,
-  index = 0,
-  trainingId
+  price,
+  slug,
+  isComingSoon = false
 }) => {
   return (
     <motion.div
-      className="flex flex-col bg-gradient-to-b from-ph-950 to-ph-900 rounded-xl overflow-hidden border border-ph-800 transition-all duration-300"
-      initial={{ opacity: 0, y: 30 }}
+      initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      transition={{ duration: 0.5, delay: index * 0.1 }}
+      transition={{ duration: 0.6 }}
+      className="relative"
     >
       {/* Header */}
       <div className="w-full h-48 bg-[#222222] flex items-center justify-center">
@@ -45,47 +38,46 @@ const TrainingCard: React.FC<TrainingCardProps> = ({
       
       {/* Content */}
       <div className="p-6 pb-0 flex-grow">
-        <p className="text-ph-300 mb-4">{subtitle}</p>
+        <h3 className="text-xl font-bold text-white mb-2">{title}</h3>
+        <p className="text-ph-300 mb-4">{description}</p>
         
         {/* Details */}
         <div className="space-y-3 mb-4">
           <div className="flex items-center text-white/80">
             <CalendarIcon className="h-5 w-5 mr-2 text-ph-600" />
-            <span className="text-sm">{date}</span>
-          </div>
-          <div className="flex items-center text-white/80">
-            <ClockIcon className="h-5 w-5 mr-2 text-ph-600" />
             <span className="text-sm">{duration}</span>
           </div>
           <div className="flex items-center text-white/80">
+            <ClockIcon className="h-5 w-5 mr-2 text-ph-600" />
+            <span className="text-sm">{price}</span>
+          </div>
+          <div className="flex items-center text-white/80">
             <MapPinIcon className="h-5 w-5 mr-2 text-ph-600" />
-            <span className="text-sm">{location}</span>
+            <span className="text-sm">{slug}</span>
           </div>
         </div>
       </div>
       
-      {/* Buttons */}
-      <div className="px-6 pt-2 pb-6">
-        <div className="flex flex-col gap-3">
-          <PrimaryButton 
-            text="Vraag offerte aan" 
-            href="#lead-form"
+      {/* Actions */}
+      <div className="p-6 pt-4">
+        <PrimaryButton 
+          text="Vraag offerte aan" 
+          href="#lead-form"
+          fullWidth
+        />
+        {isComingSoon ? (
+          <PrimaryButton
+            text="Binnenkort beschikbaar"
+            fullWidth
+            className="opacity-50 cursor-not-allowed"
+          />
+        ) : (
+          <SecondaryButton
+            text="Meer informatie"
+            href={`/training/${slug}`}
             fullWidth
           />
-          {!isComingSoon ? (
-            <SecondaryButton
-              text="Meer informatie"
-              href={`/training/${trainingId}`}
-              fullWidth
-            />
-          ) : (
-            <SecondaryButton
-              text="Binnenkort beschikbaar"
-              href="#"
-              fullWidth
-            />
-          )}
-        </div>
+        )}
       </div>
     </motion.div>
   )
