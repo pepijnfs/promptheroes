@@ -4,6 +4,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import PrimaryButton from './PrimaryButton'
 import SecondaryButton from './SecondaryButton'
+import Image from 'next/image'
 
 const styles = `
 .typewriter {
@@ -37,6 +38,53 @@ const styles = `
 .will-change-transform {
   will-change: transform;
 }
+
+.logo-slider {
+  display: flex;
+  animation: slide 30s linear infinite;
+  width: max-content;
+  mask-image: linear-gradient(to right, 
+    transparent 0%,
+    black 15%,
+    black 85%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(to right, 
+    transparent 0%,
+    black 15%,
+    black 85%,
+    transparent 100%
+  );
+  mask-size: 200% 100%;
+  -webkit-mask-size: 200% 100%;
+}
+
+.logo-slider:hover {
+  animation-play-state: paused;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 2rem;
+  height: 40px;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.logo-container:hover {
+  opacity: 1;
+}
 `;
 
 // Add the styles to the document
@@ -47,13 +95,25 @@ if (typeof document !== 'undefined') {
 }
 
 const HeroSection = () => {
+  const logos = [
+    { src: '/icons/Claude_logo.svg', alt: 'Claude' },
+    { src: '/icons/Cursor_logo.svg', alt: 'Cursor' },
+    { src: '/icons/OpenAI_logo.svg', alt: 'OpenAI' },
+    { src: '/icons/Windsurf_logo.svg', alt: 'Windsurf' },
+    { src: '/icons/Bolt_logo.svg', alt: 'Bolt' },
+    { src: '/icons/GitHub_Copilot_logo_line.svg', alt: 'GitHub Copilot' },
+  ];
+
+  // Duplicate logos for seamless infinite scroll
+  const duplicatedLogos = [...logos, ...logos];
+
   return (
     <section className="pt-24 pb-16 md:pt-32 md:pb-20 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-ph-900"></div>
         <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-ph-800/30 via-transparent to-transparent"></div>
-        <div className="absolute -top-24 -right-24 w-96 h-96 bg-ph-600/10 rounded-full blur-3xl"></div>
+        <div className="absolute -top-24 -right-24 w-96 h-96 bg-ph-500/10 rounded-full blur-3xl"></div>
       </div>
       
       {/* Grid pattern overlay */}
@@ -74,7 +134,7 @@ const HeroSection = () => {
           >
             <h1 className="h1 min-h-[80px]">
               <span className="text-white">Krijg tot </span>
-              <span className="text-ph-600">30%*</span>
+              <span className="text-gradient-blue-gold">30%*</span>
               <span className="text-white"> meer gedaan, zonder extra developers aan te nemen</span>
             </h1>
           </motion.div>
@@ -85,8 +145,8 @@ const HeroSection = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="mb-12"
           >
-            <p className="text-body-lg text-white/80 max-w-2xl min-h-[72px]">
-              Blijf niet achter. Zet AI vandaag nog in om je development team productiever te maken.
+            <p className="text-body-lg text-ph-300 max-w-2xl min-h-[72px]">
+              Zet AI vandaag nog in om je development team productiever te maken.
             </p>
           </motion.div>
           
@@ -107,7 +167,7 @@ const HeroSection = () => {
             <div className="w-full sm:w-auto">
               <SecondaryButton 
                 text="Trainingen bekijken"
-                href="#contact"
+                href="#trainings"
                 fullWidth
               />
             </div>
@@ -117,15 +177,20 @@ const HeroSection = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.8 }}
-            className="mt-8 w-full min-h-[120px]"
+            className="mt-8 w-full min-h-[120px] overflow-hidden"
           >
-            <p className="text-caption mb-6 text-center">Vertrouwd door</p>
-            <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12">
-              <span className="text-white font-bold text-lg opacity-70">Logoipsum</span>
-              <span className="text-white font-bold text-lg opacity-70">Logoipsum</span>
-              <span className="text-white font-bold text-lg opacity-70">Logoipsum</span>
-              <span className="text-white font-bold text-lg opacity-70">Logoipsum</span>
-              <span className="text-white font-bold text-lg opacity-70">Logoipsum</span>
+            <div className="logo-slider">
+              {duplicatedLogos.map((logo, index) => (
+                <div key={index} className="logo-container">
+                  <Image
+                    src={logo.src}
+                    alt={logo.alt}
+                    width={120}
+                    height={logo.alt === 'Bolt' ? 28 : 40}
+                    style={{ objectFit: 'contain', height: logo.alt === 'Bolt' ? 28 : 40 }}
+                  />
+                </div>
+              ))}
             </div>
           </motion.div>
         </div>

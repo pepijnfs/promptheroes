@@ -5,24 +5,24 @@ import { motion } from 'framer-motion'
 
 const testimonials = [
   {
-    name: "Alex Thompson",
-    role: "Senior Software Developer",
-    company: "TechCorp",
-    testimonial: "De Cursor AI training van Prompt Pilot heeft revolutionair veranderd hoe ons team werkt. We schrijven betere code in minder tijd, met een 60% vermindering in debug-uren.",
+    name: "Erik Metselaar",
+    role: "Lead Developer",
+    company: "Kampeerkennis",
+    testimonial: "De Cursor AI training van Prompt Pilot heeft ons team enorm geholpen. We schrijven betere code in minder tijd, met een flinke vermindering in debug-uren.",
     rating: 5
   },
   {
-    name: "Sarah Chen",
-    role: "Engineering Manager",
-    company: "InnovateLabs",
-    testimonial: "Het leren van geavanceerde prompt-technieken heeft onze workflow getransformeerd. We bouwen features in de helft van de tijd met hogere kwaliteit. Elke cent waard.",
+    name: "Han Hedwig",
+    role: "Senior Software Engineer",
+    company: "Dashly",
+    testimonial: "Het leren van geavanceerde prompt-technieken heeft onze workflow getransformeerd. We bouwen features sneller en met hogere kwaliteit. Aanrader!",
     rating: 5
   },
   {
-    name: "David Rodriguez",
-    role: "Full Stack Developer",
-    company: "PixelPerfect",
-    testimonial: "De verborgen Cursor-functies die we hebben geleerd waren een game-changer. Ik imponeer consequent klanten met snelle ontwikkeling en creatieve oplossingen.",
+    name: "Ivar Steijlen",
+    role: "Senior Developer",
+    company: "InformationMakers",
+    testimonial: "De verborgen Cursor-functies die we hebben geleerd waren een game-changer. Ik verras klanten nu met snelle ontwikkeling en creatieve oplossingen.",
     rating: 4
   }
 ]
@@ -45,9 +45,9 @@ const Testimonials = () => {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
-              Wat zeggen <span className="text-ph-600">Studenten</span>?
+              Wat zeggen <span className="text-gradient-blue-gold">klanten</span>?
             </h2>
-            <p className="text-white/70 max-w-2xl mx-auto">
+            <p className="text-ph-300 max-w-2xl mx-auto">
               Hoor van developers die hun productiviteit hebben getransformeerd met onze Cursor AI training.
             </p>
           </motion.div>
@@ -82,7 +82,7 @@ const Testimonials = () => {
                   <svg 
                     key={i}
                     xmlns="http://www.w3.org/2000/svg" 
-                    className={`h-5 w-5 ${i < testimonial.rating ? 'text-ph-600' : 'text-ph-800'}`} 
+                    className={`h-5 w-5 ${i < testimonial.rating ? 'text-gr-1000' : 'text-ph-800'}`} 
                     viewBox="0 0 20 20" 
                     fill="currentColor"
                   >
@@ -113,20 +113,20 @@ const Testimonials = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          <div className="p-4 bg-ph-950/50 rounded-lg border border-ph-800/50">
-            <div className="text-3xl font-bold text-ph-600 mb-1">90%</div>
+          <div className="p-4 bg-ph-700 rounded-lg border border-ph-800/50">
+            <div className="text-3xl font-bold text-white mb-1">100%</div>
             <div className="text-sm text-white/60">Tevredenheidspercentage</div>
           </div>
-          <div className="p-4 bg-ph-950/50 rounded-lg border border-ph-800/50">
-            <div className="text-3xl font-bold text-ph-600 mb-1">30%</div>
+          <div className="p-4 bg-ph-700 rounded-lg border border-ph-800/50">
+            <div className="text-3xl font-bold text-white mb-1">30%</div>
             <div className="text-sm text-white/60">Productiviteitsverhoging</div>
           </div>
-          <div className="p-4 bg-ph-950/50 rounded-lg border border-ph-800/50">
-            <div className="text-3xl font-bold text-ph-600 mb-1">20+</div>
+          <div className="p-4 bg-ph-700 rounded-lg border border-ph-800/50">
+            <div className="text-3xl font-bold text-white mb-1">20+</div>
             <div className="text-sm text-white/60">Getrainde developers</div>
           </div>
-          <div className="p-4 bg-ph-950/50 rounded-lg border border-ph-800/50">
-            <div className="text-3xl font-bold text-ph-600 mb-1">6+</div>
+          <div className="p-4 bg-ph-700 rounded-lg border border-ph-800/50">
+            <div className="text-3xl font-bold text-white mb-1">6+</div>
             <div className="text-sm text-white/60">Zakelijke klanten</div>
           </div>
         </motion.div>

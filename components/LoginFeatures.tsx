@@ -55,7 +55,7 @@ const LoginFeatures = () => {
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
               Binnenkort <span className="text-ph-600">beschikbaar</span>
             </h2>
-            <p className="text-white/70 max-w-2xl mx-auto">
+            <p className="text-ph-300 max-w-2xl mx-auto">
               Na de lancering krijg je toegang tot een schat aan AI-gerelateerde bronnen en tools
             </p>
           </motion.div>
@@ -76,7 +76,7 @@ const LoginFeatures = () => {
                 {feature.icon}
               </div>
               <h3 className="text-xl font-bold mb-2 text-white">{feature.title}</h3>
-              <p className="text-white/70">{feature.description}</p>
+              <p className="text-ph-300">{feature.description}</p>
             </motion.div>
           ))}
         </div>

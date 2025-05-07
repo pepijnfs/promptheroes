@@ -5,11 +5,42 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 255, 255, 255;
-  --background-start-rgb: 10, 71, 53;
-  --background-end-rgb: 4, 46, 33;
-  --accent-green: 37, 228, 122;
+  --foreground-rgb: #FFFFFF;
+  --background-start-rgb: #0A4735;
+  --background-end-rgb: #042E21;
+  --accent-green: #25E47A;
   --container-width: 1200px;
+  /* ph colors */
+  --ph-25: #20A6FF;
+  --ph-50: #f8fafc;
+  --ph-100: #f1f5f9;
+  --ph-200: #e2e8f0;
+  --ph-300: #cbd5e1;
+  --ph-400: #94a3b8;
+  --ph-500: #64748b;
+  --ph-600: #475569;
+  --ph-700: #334155;
+  --ph-800: #1e293b;
+  --ph-900: #0f172a;
+  --ph-950: #020617;
+  /* gr colors */
+  --gr-50: #6bc4ff;
+  --gr-100: #87c4ee;
+  --gr-200: #98c3dd;
+  --gr-300: #a8c4cc;
+  --gr-400: #b5c4bb;
+  --gr-500: #c1c4ab;
+  --gr-600: #c8c397;
+  --gr-700: #d2c589;
+  --gr-800: #dac477;
+  --gr-900: #dfc462;
+  --gr-950: #e4c4ae;
+  --gr-1000: #eac234;
+}
+
+/* Ensure consistent box sizing for all elements */
+*, *::before, *::after {
+  box-sizing: border-box;
 }
 
 @layer base {
@@ -223,6 +254,19 @@ body {
 @layer utilities {
   .tight-text {
     letter-spacing: -0.05rem;
+  }
+  
+  /* Text gradient utilities */
+  .text-gradient {
+    @apply bg-gradient-text bg-clip-text text-transparent;
+  }
+  
+  .text-gradient-blue {
+    @apply text-gradient from-ph-25 via-gr-50 to-ph-25;
+  }
+  
+  .text-gradient-blue-gold {
+    @apply text-gradient from-ph-25 via-gr-50 to-gr-1000;
   }
   
   /* Width classes for all breakpoints */

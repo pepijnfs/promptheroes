@@ -20,14 +20,14 @@ const LoginForm = () => {
         <h1 className="text-3xl font-bold mb-2 text-white">
           Welkom terug
         </h1>
-        <p className="text-white/70">
+        <p className="text-ph-300">
           Log in om toegang te krijgen tot je account
         </p>
       </div>
       
       <form className="space-y-6">
         <div>
-          <label htmlFor="email" className="block text-sm font-medium text-white/70 mb-1">
+          <label htmlFor="email" className="block text-sm font-medium text-ph-300 mb-1">
             Email <span className="text-ph-600">*</span>
           </label>
           <input
@@ -40,7 +40,7 @@ const LoginForm = () => {
         </div>
         
         <div>
-          <label htmlFor="password" className="block text-sm font-medium text-white/70 mb-1">
+          <label htmlFor="password" className="block text-sm font-medium text-ph-300 mb-1">
             Wachtwoord <span className="text-ph-600">*</span>
           </label>
           <input
@@ -80,7 +80,7 @@ const LoginForm = () => {
       </form>
       
       <div className="mt-6 text-center">
-        <p className="text-white/70">
+        <p className="text-ph-300">
           Nog geen account?{' '}
           <a href="#" className="text-ph-600 hover:text-ph-500">
             Registreer

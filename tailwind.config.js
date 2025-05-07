@@ -20,20 +20,8 @@ module.exports = {
         default: '-1px',
       },
       colors: {
-        'hero-purple': {
-          50: '#f5f3ff',
-          100: '#ede9fe',
-          200: '#ddd6fe',
-          300: '#c4b5fd',
-          400: '#a78bfa',
-          500: '#8b5cf6',
-          600: '#7c3aed',
-          700: '#6d28d9',
-          800: '#5b21b6',
-          900: '#4c1d95',
-          950: '#2e1065',
-        },
-        'hero-dark': {
+        'ph': {
+          25: '#20A6FF',
           50: '#f8fafc',
           100: '#f1f5f9',
           200: '#e2e8f0',
@@ -46,18 +34,19 @@ module.exports = {
           900: '#0f172a',
           950: '#020617',
         },
-        'ph': {
-          50: '#f0f9f5',
-          100: '#dcf0e6',
-          200: '#bce3d1',
-          300: '#8fd0b4',
-          400: '#5db693',
-          500: '#3c9d78',
-          600: '#25E47A', // Bright green accent
-          700: '#246e53',
-          800: '#1e5743',
-          900: '#0A4735', // Deep green primary
-          950: '#042e21',
+        'gr': {
+          50: '#6bc4ff',
+          100: '#87c4ee',
+          200: '#98c3dd',
+          300: '#a8c4cc',
+          400: '#b5c4bb',
+          500: '#c1c4ab',
+          600: '#c8c397',
+          700: '#d2c589',
+          800: '#dac477',
+          900: '#dfc462',
+          950: '#e4c4ae',
+          1000: '#eac234',
         },
       },
       animation: {
@@ -101,6 +90,9 @@ module.exports = {
           '0%, 100%': { transform: 'translateY(0)' },
           '50%': { transform: 'translateY(-10px)' },
         },
+      },
+      backgroundImage: {
+        'gradient-text': 'linear-gradient(to right, var(--tw-gradient-stops))',
       },
     },
   },

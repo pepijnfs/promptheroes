@@ -1,9 +1,7 @@
 import dynamic from 'next/dynamic'
 import Header from '@/components/Header'
 import HeroSection from '@/components/HeroSection'
-import WhyAISection from '@/components/WhyAISection'
 import AIBenefitsSection from '@/components/AIBenefitsSection'
-import SocialProof from '@/components/SocialProof'
 import ProblemSolution from '@/components/ProblemSolution'
 import TrainingSection from '@/components/TrainingSection'
 import TrainingOverview from '@/components/TrainingOverview'
@@ -20,14 +18,10 @@ const ChatWidget = dynamic(() => import('@/components/ChatWidget'), {
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col overflow-hidden">
+    <main className="flex min-h-scrbuttoneen flex-col overflow-hidden">
       <Header />
       <HeroSection />
-      <WhyAISection />
       <AIBenefitsSection />
-      <div className="bg-white">
-        <SocialProof />
-      </div>
       <ProblemSolution />
       <div className="bg-ph-900">
         <TrainingOverview />

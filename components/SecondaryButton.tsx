@@ -1,4 +1,5 @@
 import React from 'react';
+import './SecondaryButton.css';
 
 interface SecondaryButtonProps {
   text: string;
@@ -16,16 +17,19 @@ const SecondaryButton: React.FC<SecondaryButtonProps> = ({
   fullWidth = false
 }) => {
   return (
-    <a 
-      href={href}
-      onClick={onClick}
-      className={`ph-button-outline inline-flex items-center justify-center h-[50px] ${fullWidth ? 'w-full' : ''} ${className}`}
-    >
-      <span>{text}</span>
-      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2 text-white" viewBox="0 0 20 20" fill="currentColor">
-        <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
-      </svg>
-    </a>
+    <div className={`${fullWidth ? 'w-full' : 'inline-block'} secondary-button`}>
+      <div 
+        className={`relative ${fullWidth ? 'flex w-full' : 'inline-flex'} items-center z-10 transition-transform duration-300 hover:scale-105`}
+      >
+        <a
+          className={`font-bold flex items-center justify-center text-white relative z-10 overflow-hidden rounded-lg ${fullWidth ? 'w-full' : ''} ${className}`}
+          href={href}
+          onClick={onClick}
+        >
+          <span className="text-white">{text}</span>
+        </a>
+      </div>
+    </div>
   );
 };
 

@@ -18,12 +18,12 @@ const WhyAISection = () => {
             AI zonder plan kost je tijd en geld
           </h2>
           
-          <p className="text-body-lg text-ph-700 mb-6 max-w-3xl mx-auto">
+          <p className="text-body-md text-ph-800 mb-6 max-w-3xl mx-auto">
             Je team is al aan het experimenteren met ChatGPT en Claude, maar <span className="text-ph-600 font-semibold">zonder structuur</span>. 
             Iedereen doet maar wat. En eerlijk? De output is vaak generiek, foutgevoelig of werkt niet.
           </p>
           
-          <p className="text-body-lg text-ph-700 max-w-3xl mx-auto">
+          <p className="text-body-md text-ph-800 max-w-3xl mx-auto">
             Je ziet de kansen wel — sneller unit tests schrijven, code debuggen, met als resultaat minder werkdruk — maar je mist iemand die het <span className="text-ph-600 font-semibold">goed implementeert</span>. 
             Iemand die je team op de juiste manier begeleidt.
           </p>

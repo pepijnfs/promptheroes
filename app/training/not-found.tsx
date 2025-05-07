@@ -20,7 +20,7 @@ export default function TrainingNotFound() {
         
         <div className="max-w-md mx-auto px-4 text-center relative z-10">
           <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">Training niet gevonden</h1>
-          <p className="text-white/70 mb-8">
+          <p className="text-ph-300 mb-8">
             De training die je zoekt is niet beschikbaar. Bekijk onze andere trainingen of ga terug naar de homepagina.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

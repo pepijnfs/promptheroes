@@ -4,7 +4,6 @@ import React, { useState, useRef, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import pepijnImage from './logo/pepijn-steijger.jpeg'
-import { AcademicCapIcon } from '@heroicons/react/24/solid'
 
 // Calculate positions in a circle
 const NUM_POSITIONS = 8; // Number of positions around the circle
@@ -60,12 +59,12 @@ const InstructorSpotlight = () => {
   }
 
   return (
-    <section className="py-20 relative overflow-hidden bg-white" id="training">
+    <section className="py-20 relative overflow-hidden" id="training">
       {/* Background Elements */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute -bottom-24 -right-24 w-96 h-96 bg-ph-600/5 rounded-full blur-3xl"></div>
-      </div>
-      
+          <div className="absolute inset-0 bg-ph-900"></div>
+        </div>
+
       <div className="w-section-xl relative z-10">
         <div className="flex flex-col lg:flex-row items-center gap-16">
           {/* Instructor Image */}
@@ -96,20 +95,22 @@ const InstructorSpotlight = () => {
               {/* Instructor image */}
               <div 
                 ref={profileRef}
-                className="relative overflow-hidden w-full h-full rounded-full border-2 border-ph-600/50 p-1 cursor-pointer"
+                className="relative overflow-hidden w-full h-full rounded-full p-[2px] cursor-pointer gradient-profile-border"
                 onMouseEnter={handleHover}
                 onMouseLeave={handleHoverEnd}
               >
-                <Image
-                  src={pepijnImage}
-                  alt="Pepijn Steijger - AI Consultant & Specialist"
-                  fill
-                  className="object-cover rounded-full"
-                  quality={100}
-                  sizes="(max-width: 768px) 320px, 400px"
-                  priority={true}
-                  placeholder="blur"
-                />
+                <div className="relative w-full h-full rounded-full overflow-hidden">
+                  <Image
+                    src={pepijnImage}
+                    alt="Pepijn Steijger - AI Consultant & Specialist"
+                    fill
+                    className="object-cover rounded-full"
+                    quality={100}
+                    sizes="(max-width: 768px) 320px, 400px"
+                    priority={true}
+                    placeholder="blur"
+                  />
+                </div>
               </div>
               
               {/* Only render badges if we have dimensions */}
@@ -169,6 +170,41 @@ const InstructorSpotlight = () => {
                 </>
               )}
             </div>
+
+            <style jsx>{`
+              .gradient-profile-border {
+                background: linear-gradient(var(--ph-600), var(--ph-600)) padding-box,
+                  conic-gradient(
+                    from var(--gradient-angle),
+                    var(--btn-primary-highlight),
+                    var(--btn-primary-highlight) var(--gradient-percent),
+                    var(--gradient-shine) calc(var(--gradient-percent) * 2),
+                    var(--btn-primary-highlight) calc(var(--gradient-percent) * 3),
+                    var(--btn-primary-highlight) calc(var(--gradient-percent) * 4)
+                  ) border-box;
+                border: 2px solid transparent;
+                animation: border-gradient-angle 3s linear infinite;
+              }
+
+              .gradient-profile-border:hover {
+                animation-duration: 1.5s;
+              }
+
+              @property --gradient-angle {
+                syntax: "<angle>";
+                inherits: false;
+                initial-value: 0deg;
+              }
+
+              @keyframes border-gradient-angle {
+                0% {
+                  --gradient-angle: 0deg;
+                }
+                100% {
+                  --gradient-angle: 360deg;
+                }
+              }
+            `}</style>
           </motion.div>
           
           {/* Instructor Details */}
@@ -179,15 +215,15 @@ const InstructorSpotlight = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <div className="inline-block bg-ph-600/10 px-3 py-1 rounded-full text-ph-600 text-sm font-medium mb-4">
+            <div className="inline-block bg-ph-700 px-3 py-1 rounded-full text-white text-sm font-medium mb-4">
               Hoofdinstructeur
             </div>
             
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-ph-900">
-              Ontmoet <span className="text-ph-600">Pepijn Steijger</span>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
+              Ontmoet <span className="text-gradient-blue-gold">Pepijn Steijger</span>
             </h2>
             
-            <p className="text-ph-800 mb-6">
+            <p className="text-ph-300 mb-6">
               Pepijn is een ervaren AI prompt-engineer en expert in AI-ondersteund programmeren met meer dan tien jaar ervaring in marketing en AI. Hij heeft tientallen developers geholpen hun workflow te transformeren met tools als Cursor, Copilot, Windsurf en meer.
             </p>
             
@@ -197,18 +233,6 @@ const InstructorSpotlight = () => {
               <div className="bg-ph-100 border border-ph-200 px-3 py-1 rounded-md text-sm text-ph-800">Trainer</div>
             </div>
             
-            <div className="bg-ph-100 border border-ph-200 p-5 rounded-lg shadow-sm">
-              <div className="flex items-start mb-3">
-                <AcademicCapIcon className="h-6 w-6 text-ph-600 mr-2 flex-shrink-0" />
-                <p className="text-md text-ph-800">
-                  Mijn doel is om developers te helpen het volledige potentieel van AI-tools in hun workflow te benutten. Met de juiste prompt engineering technieken wordt AI een krachtige productiviteitsversterker.
-                </p>
-              </div>
-              
-              <div className="text-sm text-ph-700 mt-3 text-right">
-                — Pepijn Steijger
-              </div>
-            </div>
           </motion.div>
         </div>
       </div>

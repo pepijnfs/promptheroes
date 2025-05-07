@@ -1,75 +1,97 @@
+@property --gradient-angle {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
 /* Simplified button styles */
 
 :root {
   --button-radius: 6px;
+  --btn-primary-bg: var(--ph-600);
+  --btn-primary-bg-subtle: var(--ph-700);
+  --btn-primary-fg: #fff;
+  --btn-primary-highlight: #6dc5ffb3;
+  --gradient-shine: var(--gr-1000);
+  --gradient-percent: 10%;
+  --gradient-angle-offset: 0deg;
+  --gradient-angle: 0deg;
+  --animation: gradient-angle linear infinite;
+  --duration: 3s;
 }
 
-/* Button appearance */
-.custom-button a {
-  background-color: #25E47A;
-  border-radius: var(--button-radius);
-  transition: background-color 0.3s ease, transform 0.3s ease;
+.custom-button {
   position: relative;
-  overflow: hidden;
+  display: inline-block;
+  border-radius: var(--button-radius, 6px);
+  padding: 2px;
+  background: transparent;
+  z-index: 0;
+  isolation: isolate;
 }
 
-/* Custom button hover effect */
-.custom-button:hover a {
-  background-color: #3c9d78;
+.custom-button a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  min-width: 200px;
+  font-weight: 500;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  border-radius: var(--button-radius, 6px);
+  background: var(--btn-primary-bg);
+  color: var(--btn-primary-fg);
+  height: 50px;
+  min-height: 50px;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  text-align: center;
+  text-decoration: none;
+  position: relative;
+  z-index: 1;
+  transition: background 0.3s;
+  box-shadow: inset 0 0 0 1px var(--btn-primary-bg-subtle), 0 4px 16px -2px #13141540, 0 8px 24px -4px #00101a4d;
 }
 
-/* Animation for glow effect */
-@keyframes pulse-glow {
-  0% { opacity: 0.7; }
-  50% { opacity: 0.9; }
-  100% { opacity: 0.7; }
+.custom-button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: var(--button-radius, 6px);
+  padding: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: linear-gradient(var(--btn-primary-bg), var(--btn-primary-bg)) padding-box,
+    conic-gradient(
+      from calc(var(--gradient-angle) - var(--gradient-angle-offset)),
+      var(--btn-primary-highlight),
+      var(--btn-primary-highlight) var(--gradient-percent),
+      var(--gradient-shine) calc(var(--gradient-percent) * 2),
+      var(--btn-primary-highlight) calc(var(--gradient-percent) * 3),
+      var(--btn-primary-highlight) calc(var(--gradient-percent) * 4)
+    ) border-box;
+  border: 1px solid transparent;
+  box-shadow: inherit;
+  transition: filter 0.3s;
+  animation: border-gradient-angle var(--duration, 3s) linear infinite;
 }
 
-/* Apply the pulse animation to the glow */
-.custom-button:hover .absolute.-z-10 {
-  animation: pulse-glow 2s ease-in-out infinite;
+@keyframes border-gradient-angle {
+  0% {
+    --gradient-angle: 0deg;
+  }
+  100% {
+    --gradient-angle: 360deg;
+  }
 }
 
-/* Edge glow effect */
-.edge-glow {
-  box-shadow: 
-    inset 0 0 15px rgba(37, 228, 122, 0.3),
-    0 0 10px rgba(37, 228, 122, 0.4);
+.custom-button:hover::before {
+  --duration: 1.5s;
 }
 
-/* Animation for edge glow pulsing */
-@keyframes edge-pulse {
-  0% { box-shadow: inset 0 0 15px rgba(37, 228, 122, 0.3), 0 0 10px rgba(37, 228, 122, 0.4); }
-  50% { box-shadow: inset 0 0 20px rgba(37, 228, 122, 0.5), 0 0 15px rgba(37, 228, 122, 0.6); }
-  100% { box-shadow: inset 0 0 15px rgba(37, 228, 122, 0.3), 0 0 10px rgba(37, 228, 122, 0.4); }
+.custom-button:active a {
+  filter: brightness(0.95);
 }
-
-/* Apply edge pulse animation */
-.custom-button:hover .edge-glow {
-  animation: edge-pulse 2s ease-in-out infinite;
-}
-
-/* Reset for Tailwind styles */
-*, ::after, ::before {
-  --tw-border-spacing-x: 0;
-  --tw-border-spacing-y: 0;
-  --tw-translate-x: 0;
-  --tw-translate-y: 0;
-  --tw-rotate: 0;
-  --tw-skew-x: 0;
-  --tw-skew-y: 0;
-  --tw-scale-x: 1;
-  --tw-scale-y: 1;
-  --tw-scroll-snap-strictness: proximity;
-}
-
-/* Transition properties */
-.transition-all {
-  transition-property: all;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-/* Will-change property for performance */
-.will-change-transform {
-  will-change: transform;
-} 

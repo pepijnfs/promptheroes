@@ -56,9 +56,8 @@ const TrainingOverview = () => {
     <section className="py-20 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-gradient-to-br from-ph-600/20 to-transparent"></div>
-        <div className="absolute bottom-0 left-0 w-1/2 h-1/2 bg-gradient-to-tr from-ph-600/10 to-transparent"></div>
-      </div>
+          <div className="absolute inset-0 bg-ph-900"></div>
+        </div>
       
       <div className="w-section-xl relative z-10">
         <div className="text-center mb-16">
@@ -69,9 +68,9 @@ const TrainingOverview = () => {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
-              Wat <span className="text-ph-600">leer</span> je bij Prompt Pilot?
+              Wat <span className="text-gradient-blue-gold">leren</span> developers
             </h2>
-            <p className="text-white/70 max-w-2xl mx-auto">
+            <p className="text-ph-300 max-w-2xl mx-auto">
               Een complete training in het effectief gebruiken van AI EDI&apos;s voor programmeren.
             </p>
           </motion.div>
@@ -92,7 +91,7 @@ const TrainingOverview = () => {
                 {topic.icon}
               </div>
               <h3 className="text-xl font-bold mb-2 text-white">{topic.title}</h3>
-              <p className="text-white/70">{topic.description}</p>
+              <p className="text-ph-300">{topic.description}</p>
             </motion.div>
           ))}
         </div>

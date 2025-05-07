@@ -11,7 +11,7 @@ const faqData = [
   },
   {
     question: "Wat leer ik tijdens de Cursor AI-training?",
-    answer: "Onze uitgebreide training behandelt alles van LLM-basisprincipes tot geavanceerde prompt engineering. Je leert essentiële vaardigheden zoals effectieve promptstructurering, het kiezen tussen modellen (GPT-4 vs Claude), praktisch coderen met AI-ondersteuning, en toepassingen in je dagelijkse workflow. Uiteindelijk kun je AI gebruiken om je productiviteit met wel 30% te verhogen."
+    answer: "Onze uitgebreide training behandelt alles van LLM-basisprincipes tot geavanceerde prompt engineering. Je leert essentiële vaardigheden zoals effectieve promptstructurering, het kiezen tussen modellen (GPT-4 vs Claude), praktisch programmeren met AI-ondersteuning, en toepassingen in je dagelijkse workflow. Uiteindelijk kun je AI gebruiken om je productiviteit met wel 30% te verhogen."
   },
   {
     question: "Heb ik eerdere ervaring met AI-tools nodig om deel te nemen aan de training?",
@@ -30,11 +30,11 @@ const faqData = [
     answer: "We bieden flexibele trainingsopties die we volledig aanpassen aan jouw wensen. Je kunt kiezen voor incompany trainingen op locatie, volledig online sessies, of een hybride aanpak. De trainingen combineren live sessies met praktische workshops, waarbij we de focus en werkwijze afstemmen op jouw specifieke behoeften en projecten. Voor teams passen we de sessies aan op jullie specifieke projecten en werkwijzen."
   },
   {
-    question: "Hoe kies ik tussen GPT-4 en Claude-modellen voor het coderen?",
-    answer: "Onze training behandelt de specifieke sterke punten van elk model. Over het algemeen blinkt GPT-4 uit in precieze logica, stapsgewijze redenering en strikte formatteringstaken. Claude-modellen (vooral 3.5/3.7) verwerken grotere contexten (tot 100k tokens) en zijn uitstekend voor refactoring, analyse van meerdere bestanden en samenwerkend coderen. We leren je precies wanneer je welk model moet gebruiken voor optimale resultaten."
+    question: "Hoe kies ik tussen GPT-4 en Claude-modellen voor het programmeren?",
+    answer: "Onze training behandelt de specifieke sterke punten van elk model. Over het algemeen blinkt GPT-4 uit in precieze logica, stapsgewijze redenering en strikte formatteringstaken. Claude-modellen (vooral 3.5/3.7) verwerken grotere contexten (tot 100k tokens) en zijn uitstekend voor refactoring, analyse van meerdere bestanden en samenwerkend programmeren. We leren je precies wanneer je welk model moet gebruiken voor optimale resultaten."
   },
   {
-    question: "Behandelt de training hoe je effectieve prompts specifiek voor coderen schrijft?",
+    question: "Behandelt de training hoe je effectieve prompts specifiek voor programmeren schrijft?",
     answer: "Ja, prompt engineering voor code is een belangrijk onderdeel. Je leert hoe je prompts structureert met de juiste context, duidelijkheid en beperkingen om nauwkeurige code te krijgen. We behandelen specifieke technieken voor veelvoorkomende taken zoals het genereren van functies, debuggen, documentatie en refactoring - allemaal met praktische voorbeelden die je direct kunt toepassen."
   },
   {
@@ -56,9 +56,9 @@ const FAQ = () => {
       <div className="w-section-xl relative z-10">
         <div className="text-center mb-16">
           <h2 className="h2 text-white mb-4">
-            Veelgestelde <span className="text-ph-600">Vragen</span>
+            Veelgestelde vragen
           </h2>
-          <p className="text-body text-white/70 max-w-2xl mx-auto">
+          <p className="text-body text-ph-300 max-w-2xl mx-auto">
             Vind antwoorden op veelgestelde vragen over ons AI-trainingsprogramma en hoe we jouw team kunnen helpen succesvol te zijn.
           </p>
         </div>
@@ -91,7 +91,7 @@ const FAQ = () => {
                     transition={{ duration: 0.3, ease: "easeInOut" }}
                     className="overflow-hidden"
                   >
-                    <div className="p-5 bg-ph-900/70 rounded-b-lg border-x border-b border-ph-800 text-body text-white/70">
+                    <div className="p-5 bg-ph-900/70 rounded-b-lg border-x border-b border-ph-800 text-body text-ph-300">
                       {faq.answer}
                     </div>
                   </motion.div>
@@ -104,13 +104,13 @@ const FAQ = () => {
         {/* Still Have Questions */}
         <div className="mt-12 text-center">
           <h3 className="h4 text-white mb-4">Nog vragen? Wij helpen je graag.</h3>
-          <p className="text-body text-white/70 mb-4">Ons team staat klaar om al je vragen te beantwoorden.</p>
+          <p className="text-body text-ph-300 mb-4">Ons team staat klaar om al je vragen te beantwoorden.</p>
           <a
             href="#contact"
-            className="inline-flex items-center text-ph-600 hover:text-ph-500 transition-colors"
+            className="inline-flex items-center text-gradient-blue-gold"
           >
             Neem contact op
-            <ChevronRightIcon className="h-5 w-5 ml-2" />
+            <ChevronRightIcon className="h-4 w-4 ml-2 mt-1 fill-gr-800" />
           </a>
         </div>
       </div>

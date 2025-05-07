@@ -68,7 +68,7 @@ const TrainingBenefits: React.FC<TrainingBenefitsProps> = ({ training }) => {
               <ChartBarIcon className="h-12 w-12 text-ph-600 mb-6" />
               
               <h3 className="text-2xl font-bold mb-4 text-white">Meetbare productiviteitsgroei</h3>
-              <p className="text-white/70 mb-6">
+              <p className="text-ph-300 mb-6">
                 Onze klanten rapporteren gemiddeld 20-30% productiviteitsverbetering na het implementeren van de technieken die in deze training worden aangeleerd. Je zult merken dat je team:
               </p>
               

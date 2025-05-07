@@ -718,7 +718,7 @@ const ChatWidget = () => {
                 </div>
                 <div>
                   <h5 className="font-bold">Pepijn Steijger</h5>
-                  <p className="text-xs text-white/70">AI Trainer</p>
+                  <p className="text-xs text-ph-300">AI Trainer</p>
                 </div>
                 <button
                   onClick={toggleChat}
@@ -744,7 +744,7 @@ const ChatWidget = () => {
                     }`}
                   >
                     <p className="text-sm">{message.text}</p>
-                    <p className={`text-xs mt-1 ${message.sender === 'user' ? 'text-white/70' : 'text-gray-500'}`}>
+                    <p className={`text-xs mt-1 ${message.sender === 'user' ? 'text-ph-300' : 'text-gray-500'}`}>
                       {formatTime(message.timestamp)}
                     </p>
                   </div>

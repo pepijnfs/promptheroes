@@ -28,8 +28,6 @@ const AIBenefitsSection = () => {
       {/* Background Elements */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-ph-900"></div>
-        <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-gradient-to-br from-ph-600/20 to-transparent"></div>
-        <div className="absolute bottom-0 left-0 w-1/2 h-1/2 bg-gradient-to-tr from-ph-600/10 to-transparent"></div>
       </div>
       
       <div className="w-section-xl relative z-10">
@@ -41,9 +39,9 @@ const AIBenefitsSection = () => {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
-              Waarom <span className="text-ph-600">AI voor Developers?</span>
+              Waarom <span className="text-gradient-blue-gold">AI voor developers</span>
             </h2>
-            <p className="text-white/70 max-w-2xl mx-auto">
+            <p className="text-ph-300 max-w-2xl mx-auto">
               Verhoog de productiviteit van je development team zonder extra mensen aan te nemen.
             </p>
           </motion.div>
@@ -65,7 +63,7 @@ const AIBenefitsSection = () => {
                 </div>
               </div>
               <h3 className="text-xl font-bold mb-2 text-white">{benefit.title}</h3>
-              <p className="text-white/70">{benefit.description}</p>
+              <p className="text-ph-300">{benefit.description}</p>
             </motion.div>
           ))}
         </div>

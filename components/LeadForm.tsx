@@ -132,7 +132,7 @@ const LeadForm = () => {
         return (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="md:col-span-2">
-              <label htmlFor="name" className="block text-sm font-medium text-white/70 mb-1">
+              <label htmlFor="name" className="block text-sm font-medium text-ph-300 mb-1">
                 Volledige naam <span className="text-ph-600">*</span>
               </label>
               <input
@@ -148,7 +148,7 @@ const LeadForm = () => {
             </div>
             
             <div className="md:col-span-2">
-              <label htmlFor="company" className="block text-sm font-medium text-white/70 mb-1">
+              <label htmlFor="company" className="block text-sm font-medium text-ph-300 mb-1">
                 Bedrijfsnaam <span className="text-ph-600">*</span>
               </label>
               <input
@@ -164,7 +164,7 @@ const LeadForm = () => {
             </div>
             
             <div className="md:col-span-2">
-              <label htmlFor="trainingType" className="block text-sm font-medium text-white/70 mb-1">
+              <label htmlFor="trainingType" className="block text-sm font-medium text-ph-300 mb-1">
                 Training <span className="text-ph-600">*</span>
               </label>
               <select
@@ -197,7 +197,7 @@ const LeadForm = () => {
         return (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="md:col-span-2">
-              <label htmlFor="role" className="block text-sm font-medium text-white/70 mb-1">
+              <label htmlFor="role" className="block text-sm font-medium text-ph-300 mb-1">
                 Functie <span className="text-ph-600">*</span>
               </label>
               <input
@@ -213,7 +213,7 @@ const LeadForm = () => {
             </div>
             
             <div className="md:col-span-2">
-              <label htmlFor="companySize" className="block text-sm font-medium text-white/70 mb-1">
+              <label htmlFor="companySize" className="block text-sm font-medium text-ph-300 mb-1">
                 Bedrijfsgrootte <span className="text-ph-600">*</span>
               </label>
               <select
@@ -235,7 +235,7 @@ const LeadForm = () => {
             </div>
             
             <div className="md:col-span-2">
-              <label htmlFor="trainingParticipants" className="block text-sm font-medium text-white/70 mb-1">
+              <label htmlFor="trainingParticipants" className="block text-sm font-medium text-ph-300 mb-1">
                 Aantal deelnemers voor training <span className="text-ph-600">*</span>
               </label>
               <select
@@ -260,7 +260,7 @@ const LeadForm = () => {
         return (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="md:col-span-2">
-              <label htmlFor="email" className="block text-sm font-medium text-white/70 mb-1">
+              <label htmlFor="email" className="block text-sm font-medium text-ph-300 mb-1">
                 Werk e-mail <span className="text-ph-600">*</span>
               </label>
               <input
@@ -282,7 +282,7 @@ const LeadForm = () => {
             </div>
             
             <div className="md:col-span-2">
-              <label htmlFor="phone" className="block text-sm font-medium text-white/70 mb-1">
+              <label htmlFor="phone" className="block text-sm font-medium text-ph-300 mb-1">
                 Telefoonnummer <span className="text-ph-600">*</span>
               </label>
               <input
@@ -304,7 +304,7 @@ const LeadForm = () => {
             </div>
             
             <div className="md:col-span-2">
-              <label htmlFor="message" className="block text-sm font-medium text-white/70 mb-1">
+              <label htmlFor="message" className="block text-sm font-medium text-ph-300 mb-1">
                 Wat zijn je belangrijkste doelen voor de training?
               </label>
               <textarea
@@ -395,9 +395,8 @@ const LeadForm = () => {
     <section id="lead-form" className="py-20 relative overflow-hidden bg-white">
       {/* Background Elements */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-ph-600/30 to-transparent"></div>
-        <div className="absolute -bottom-12 -right-12 w-64 h-64 bg-ph-600/10 rounded-full blur-3xl"></div>
-      </div>
+          <div className="absolute inset-0 bg-ph-900"></div>
+        </div>
       
       <div className="w-section-xl relative z-10">
         <motion.div 
@@ -420,10 +419,10 @@ const LeadForm = () => {
                   viewport={{ once: true }}
                   transition={{ duration: 0.5 }}
                 >
-                  Vraag direct een <span className="text-ph-600">offerte</span> aan
+                  Vraag direct een <span className="text-gradient-blue-gold">offerte</span> aan
                 </motion.h2>
                 <motion.p 
-                  className="text-white/70 max-w-2xl mx-auto"
+                  className="text-ph-300 max-w-2xl mx-auto"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
@@ -444,8 +443,8 @@ const LeadForm = () => {
                     <CheckCircleIcon className="h-8 w-8" />
                   </div>
                   <h3 className="text-2xl font-bold mb-2 text-white">Bedankt!</h3>
-                  <p className="text-white/70 mb-6">
-                    Je registratie is ontvangen. We nemen binnenkort contact met je op met gedetailleerde informatie over je aankomende trainingssessie.
+                  <p className="text-ph-300 mb-6">
+                    Je offerte-aanvraag is ontvangen. We nemen uiterlijk binnen 24 uur, maar meestal binnen een paar uur, contact met je op.
                   </p>
                   <p className="text-white/50 text-sm">
                     Controleer je inbox voor een bevestigingsmail met meer informatie.
@@ -487,33 +486,33 @@ const LeadForm = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <div className="bg-ph-100 p-5 rounded-lg border border-ph-200 flex items-start shadow-sm">
-              <div className="bg-ph-600/20 p-2 rounded mr-4">
+            <div className="bg-gradient-to-b from-ph-950 to-ph-900 p-6 rounded-xl border border-ph-800 hover:border-ph-600 transition-all duration-300">
+              <div className="w-12 h-12 bg-ph-600/20 rounded-lg flex items-center justify-center mb-4">
                 <CalendarIcon className="h-6 w-6 text-ph-600" />
               </div>
               <div>
-                <h5 className="font-semibold mb-1 text-ph-900">Populair</h5>
-                <p className="text-sm text-ph-700">Trainingsmomenten zijn beperkt</p>
+                <h5 className="font-semibold mb-1 text-white">Populair</h5>
+                <p className="text-sm text-ph-300">Beperkte beschikbaarheid</p>
               </div>
             </div>
             
-            <div className="bg-ph-100 p-5 rounded-lg border border-ph-200 flex items-start shadow-sm">
-              <div className="bg-ph-600/20 p-2 rounded mr-4">
+            <div className="bg-gradient-to-b from-ph-950 to-ph-900 p-6 rounded-xl border border-ph-800 hover:border-ph-600 transition-all duration-300">
+              <div className="w-12 h-12 bg-ph-600/20 rounded-lg flex items-center justify-center mb-4">
                 <ClockIcon className="h-6 w-6 text-ph-600" />
               </div>
               <div>
-                <h5 className="font-semibold mb-1 text-ph-900">Trainingsduur</h5>
-                <p className="text-sm text-ph-700">Gemiddeld 3 tot 4 uur per training</p>
+                <h5 className="font-semibold mb-1 text-white">Trainingsduur</h5>
+                <p className="text-sm text-ph-300">3 tot 4 uur per training</p>
               </div>
             </div>
             
-            <div className="bg-ph-100 p-5 rounded-lg border border-ph-200 flex items-start shadow-sm">
-              <div className="bg-ph-600/20 p-2 rounded mr-4">
+            <div className="bg-gradient-to-b from-ph-950 to-ph-900 p-6 rounded-xl border border-ph-800 hover:border-ph-600 transition-all duration-300">
+              <div className="w-12 h-12 bg-ph-600/20 rounded-lg flex items-center justify-center mb-4">
                 <MapPinIcon className="h-6 w-6 text-ph-600" />
               </div>
               <div>
-                <h5 className="font-semibold mb-1 text-ph-900">Locatie</h5>
-                <p className="text-sm text-ph-700">Bij jullie op kantoor of online</p>
+                <h5 className="font-semibold mb-1 text-white">Locatie</h5>
+                <p className="text-sm text-ph-300">In-company of online</p>
               </div>
             </div>
           </motion.div>

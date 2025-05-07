@@ -38,28 +38,14 @@ const TrainingCard: React.FC<TrainingCardProps> = ({
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
     >
-      {/* Image */}
-      <div className="relative w-full h-48 bg-ph-800">
-        <Image
-          src={imageSrc}
-          alt={`${title} - ${subtitle}`}
-          fill
-          className="object-cover"
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
-          priority={index < 2}
-          quality={90}
-        />
-        {isComingSoon && (
-          <div className="absolute top-3 right-3 bg-ph-600 text-white text-xs font-semibold py-1 px-2 rounded">
-            Binnenkort beschikbaar
-          </div>
-        )}
+      {/* Header */}
+      <div className="w-full h-48 bg-[#222222] flex items-center justify-center">
+        <h3 className="text-2xl font-bold text-white text-center px-4">{title}</h3>
       </div>
       
       {/* Content */}
       <div className="p-6 pb-0 flex-grow">
-        <h3 className="text-xl font-bold mb-1 text-white">{title}</h3>
-        <p className="text-white/70 mb-4">{subtitle}</p>
+        <p className="text-ph-300 mb-4">{subtitle}</p>
         
         {/* Details */}
         <div className="space-y-3 mb-4">

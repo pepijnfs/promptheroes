@@ -54,7 +54,7 @@ const Header = () => {
                 <Bars3Icon className="w-6 h-6" />
               </button>
 
-              <a href="/" className="flex items-center">
+              <a href="/" className="flex items-center text-white">
                 <Logo textSize="xl" />
               </a>
             </motion.div>
@@ -76,7 +76,7 @@ const Header = () => {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-              <a href="/login" className="px-5 py-2.5 text-sm font-bold bg-ph-600 hover:bg-ph-500 text-white rounded-lg transition-all">
+              <a href="/login" className="px-5 py-2.5 text-sm font-bold bg-ph-700 hover:bg-ph-600 text-white rounded-lg transition-all">
                 Log in
               </a>
             </motion.div>

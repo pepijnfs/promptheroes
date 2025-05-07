@@ -1,0 +1,45 @@
+/* SecondaryButton.css - based on CustomButton.css but without gradient border/animation */
+
+:root {
+  --button-radius: 6px;
+}
+
+.secondary-button {
+  position: relative;
+  display: inline-block;
+  border-radius: var(--button-radius, 6px);
+  padding: 0px;
+  background: transparent;
+  z-index: 0;
+  isolation: isolate;
+}
+
+.secondary-button a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  min-width: 200px;
+  font-weight: 500;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  border-radius: var(--button-radius, 6px);
+  background: var(--ph-700);
+  color: #fff;
+  height: 54px;
+  min-height: 50px;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  text-align: center;
+  text-decoration: none;
+  position: relative;
+  z-index: 1;
+  transition: background 0.3s;
+  box-shadow: 0 4px 16px -2px #13141540, 0 8px 24px -4px #00101a4d;
+}
+
+.secondary-button:active a {
+  filter: brightness(0.95);
+} 

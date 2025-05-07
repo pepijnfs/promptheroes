@@ -10,10 +10,8 @@ const TrainingSection = () => {
     <section className="py-20 relative overflow-hidden" id="trainings">
       {/* Background Elements */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-ph-600/30 to-transparent"></div>
-        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-ph-600/30 to-transparent"></div>
-        <div className="absolute -top-24 -right-24 w-96 h-96 bg-ph-600/5 rounded-full blur-3xl"></div>
-      </div>
+          <div className="absolute inset-0 bg-ph-900"></div>
+        </div>
       
       <div className="w-section-xl relative z-10">
         <div className="text-center mb-16">
@@ -24,9 +22,9 @@ const TrainingSection = () => {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
-              Onze <span className="text-ph-600">trainingen</span>
+              Onze <span className="text-gradient-blue-gold">trainingen</span>
             </h2>
-            <p className="text-white/70 max-w-2xl mx-auto">
+            <p className="text-ph-300 max-w-2xl mx-auto">
               Kies de training die het beste aansluit bij de ontwikkelbehoefte van jouw team
             </p>
           </motion.div>

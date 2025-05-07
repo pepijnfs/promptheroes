@@ -47,17 +47,17 @@ const TrainingContent: React.FC<TrainingContentProps> = ({ training }) => {
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
               Wat je gaat <span className="text-ph-600">leren</span>
             </h2>
-            <p className="text-white/70 max-w-2xl mx-auto">
+            <p className="text-ph-300 max-w-2xl mx-auto">
               {training.description}
             </p>
           </motion.div>
         </div>
         
-        <div className="flex flex-wrap justify-center gap-6 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
           {training.contentSections.map((section, index) => (
             <motion.div
               key={index}
-              className="bg-gradient-to-b from-ph-950 to-ph-900 p-6 rounded-xl border border-ph-800 hover:border-ph-600 transition-all duration-300 w-full md:w-[calc(25%-1.125rem)]"
+              className="bg-gradient-to-b from-ph-950 to-ph-900 p-6 rounded-xl border border-ph-800 hover:border-ph-600 transition-all duration-300"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}

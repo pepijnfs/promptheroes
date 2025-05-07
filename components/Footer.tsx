@@ -25,16 +25,16 @@ const Footer = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
-              <div className="flex items-center gap-2 mb-4">
+              <div className="flex items-center gap-2 mb-4 text-white">
                 <Logo textSize="xl" />
               </div>
-              <p className="text-white/70 mb-6 max-w-md">
+              <p className="text-ph-300 mb-6 max-w-md">
                 We helpen ontwikkelaars met expert AI-consultancy, prompt engineering training en Cursor AI beheersing om je productiviteit te verhogen.
               </p>
               <div className="flex space-x-4">
                 <a 
                   href="https://linkedin.com/company/promptpilot" 
-                  className="text-white/70 hover:text-ph-600 transition-colors"
+                  className="text-ph-300 hover:text-ph-600 transition-colors"
                   aria-label="LinkedIn"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -59,7 +59,7 @@ const Footer = () => {
                 <li key={training.id}>
                   <Link 
                     href={`/training/${training.id}`} 
-                    className="text-white/70 hover:text-ph-600 transition-colors"
+                    className="text-ph-300 hover:text-ph-600 transition-colors"
                   >
                     {training.title}{training.isComingSoon ? ' (Binnenkort beschikbaar)' : ''}
                   </Link>
@@ -76,14 +76,14 @@ const Footer = () => {
           >
             <h3 className="text-lg font-semibold text-white mb-4">Contact</h3>
             <ul className="space-y-2">
-              <li className="text-white/70">
-                <a href="mailto:hello@promptpilot.nlm" className="text-ph-600 hover:text-ph-500 transition-colors">hello@promptpilot.nl</a>
+              <li className="">
+                <a href="mailto:hello@promptpilot.nlm" className="text-gradient-blue-gold">hello@promptpilot.nl</a>
               </li>
-              <li className="text-white/70">
-                <a href="tel:+31624798648" className="text-ph-600 hover:text-ph-500 transition-colors">+31 6 24798648</a>
+              <li className="">
+                <a href="tel:+31624798648" className="text-gradient-blue-gold">+31 6 24798648</a>
               </li>
-              <li className="text-white/70 mt-4">
-                <address className="not-italic">
+              <li className="">
+                <address className="not-italic text-ph-300">
                   Prompt Pilot<br />
                   Stationsplein 45<br />
                   3013 AK Rotterdam<br />
