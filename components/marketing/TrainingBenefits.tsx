@@ -30,8 +30,8 @@ const TrainingBenefits: React.FC<TrainingBenefitsProps> = ({ training }) => {
               <div className="inline-block bg-ph-600/10 px-3 py-1 rounded-full text-ph-600 text-sm font-medium mb-4">
                 De voordelen
               </div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-ph-900">
-                Waarom deze training <span className="text-ph-600">volgen?</span>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
+                Waarom <span className="text-gradient-blue-gold">{training.title}</span> training volgen?
               </h2>
               <p className="text-ph-900/70">
                 Door te investeren in onze {training.title} training kan je development team tot wel 30% productiever worden. De juiste AI-tools en technieken kunnen een enorme impact hebben op de efficiëntie en kwaliteit van softwareontwikkeling.
