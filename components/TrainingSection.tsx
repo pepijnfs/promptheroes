@@ -2,8 +2,8 @@
 
 import React from 'react'
 import { motion } from 'framer-motion'
-import TrainingCard from './TrainingCard'
-import { trainings } from '@/services/trainingService'
+import TrainingCard from './training/TrainingCard' 
+import { trainings } from '../services/trainingService'
 
 const TrainingSection = () => {
   return (
@@ -38,7 +38,8 @@ const TrainingSection = () => {
               title={training.title}
               description={training.subtitle}
               duration={training.duration}
-              price="€2.500"
+              date={training.date}
+              location={training.location}
               slug={training.id}
               isComingSoon={training.isComingSoon}
             />
