@@ -19,9 +19,9 @@ const testimonials = [
     rating: 5
   },
   {
-    name: "Ivar Steijlen",
+    name: "Ruud Steller",
     role: "Senior Developer",
-    company: "InformationMakers",
+    company: "KPN",
     testimonial: "De verborgen Cursor-functies die we hebben geleerd waren een game-changer. Ik verras klanten nu met snelle ontwikkeling en creatieve oplossingen.",
     rating: 4
   }
