@@ -50,7 +50,7 @@ const FAQ = () => {
     <section className="py-20 relative overflow-hidden bg-ph-900" id="faq">
       {/* Background Elements */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute -top-24 -left-24 w-96 h-96 bg-ph-600/10 rounded-full blur-3xl"></div>
+          <div className="absolute inset-0 bg-ph-900"></div>
       </div>
       
       <div className="w-section-xl relative z-10">

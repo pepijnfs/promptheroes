@@ -79,8 +79,8 @@ const TrainingHero: React.FC<TrainingHeroProps> = ({ training }) => {
             className="mb-8"
           >
             <h1 className="h1">
-              <span className="text-white">{training.title} </span>
-              <span className="text-ph-600">Training</span>
+              <span className="text-gradient-blue-gold">{training.title} </span>
+              <span className="text-white">Training</span>
             </h1>
           </motion.div>
           
@@ -90,7 +90,7 @@ const TrainingHero: React.FC<TrainingHeroProps> = ({ training }) => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="mb-12"
           >
-            <p className="text-body-lg text-ph-300 max-w-2xl">
+            <p className="text-body-lg text-ph-300 max-w-1xl">
               {training.subtitle}
             </p>
           </motion.div>
@@ -142,14 +142,6 @@ const TrainingHero: React.FC<TrainingHeroProps> = ({ training }) => {
             transition={{ duration: 0.8, delay: 0.8 }}
             className="mt-8 w-full"
           >
-            <p className="text-caption mb-6 text-center">Vertrouwd door</p>
-            <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12">
-              <span className="text-white font-bold text-lg opacity-70">Logoipsum</span>
-              <span className="text-white font-bold text-lg opacity-70">Logoipsum</span>
-              <span className="text-white font-bold text-lg opacity-70">Logoipsum</span>
-              <span className="text-white font-bold text-lg opacity-70">Logoipsum</span>
-              <span className="text-white font-bold text-lg opacity-70">Logoipsum</span>
-            </div>
           </motion.div>
         </div>
       </div>

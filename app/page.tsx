@@ -9,6 +9,7 @@ import Testimonials from '@/components/marketing/Testimonials'
 import LeadForm from '@/components/features/LeadForm'
 import FAQ from '@/components/marketing/FAQ'
 import Footer from '@/components/layout/Footer'
+import InstructorSpotlight from '@/components/marketing/InstructorSpotlight'
 
 // Dynamically import ChatWidget with no SSR
 const ChatWidget = dynamic(() => import('@/components/features/ChatWidget'), {
@@ -25,6 +26,7 @@ export default function Home() {
       <TrainingSection />
       <TrainingOverview />
       <Testimonials />
+      <InstructorSpotlight />
       <LeadForm />
       <FAQ />
       <Footer />

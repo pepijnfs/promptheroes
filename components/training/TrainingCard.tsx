@@ -5,6 +5,7 @@ import { motion } from 'framer-motion'
 import { CalendarIcon, ClockIcon, MapPinIcon } from '@heroicons/react/24/solid'
 import PrimaryButton from '@/components/common/PrimaryButton'
 import SecondaryButton from '@/components/common/SecondaryButton'
+import Image from 'next/image'
 
 interface TrainingCardProps {
   title: string
@@ -14,6 +15,7 @@ interface TrainingCardProps {
   location: string
   slug: string
   isComingSoon?: boolean
+  imageSrc?: string
 }
 
 const TrainingCard: React.FC<TrainingCardProps> = ({
@@ -23,7 +25,8 @@ const TrainingCard: React.FC<TrainingCardProps> = ({
   date,
   location,
   slug,
-  isComingSoon = false
+  isComingSoon = false,
+  imageSrc
 }) => {
   return (
     <motion.div
@@ -34,8 +37,17 @@ const TrainingCard: React.FC<TrainingCardProps> = ({
       className="relative"
     >
       {/* Header */}
-      <div className="w-full h-48 bg-[#333] flex items-center justify-center">
-        <h3 className="text-2xl font-bold text-white text-center px-4">{title}</h3>
+      <div className="w-full h-48 bg-[#333] flex items-center justify-center relative overflow-hidden rounded-t-xl">
+        {imageSrc ? (
+          <Image 
+            src={imageSrc} 
+            alt={title} 
+            fill
+            className="object-cover"
+          />
+        ) : (
+          <h3 className="text-2xl font-bold text-white text-center px-4">{title}</h3>
+        )}
       </div>
       
       {/* Content */}

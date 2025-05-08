@@ -11,7 +11,7 @@ const TrainingSection = () => {
       {/* Background Elements */}
       <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-ph-900"></div>
-        </div>
+      </div>
       
       <div className="w-section-xl relative z-10">
         <div className="text-center mb-16">
@@ -42,6 +42,7 @@ const TrainingSection = () => {
               location={training.location}
               slug={training.id}
               isComingSoon={training.isComingSoon}
+              imageSrc={training.imageSrc}
             />
           ))}
         </div>

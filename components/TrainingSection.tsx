@@ -42,6 +42,7 @@ const TrainingSection = () => {
               location={training.location}
               slug={training.id}
               isComingSoon={training.isComingSoon}
+              imageSrc={training.imageSrc}
             />
           ))}
         </div>

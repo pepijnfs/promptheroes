@@ -45,7 +45,7 @@ const TrainingContent: React.FC<TrainingContentProps> = ({ training }) => {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
-              Wat je gaat <span className="text-ph-600">leren</span>
+              Wat je <span className="text-gradient-blue-gold">leert</span>
             </h2>
             <p className="text-ph-300 max-w-2xl mx-auto">
               {training.description}
