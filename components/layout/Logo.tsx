@@ -2,7 +2,6 @@
 
 import { useEffect } from 'react'
 import Image from 'next/image'
-import logoIcon from '../logo/ph-logo-icon.png'
 
 interface LogoProps {
   className?: string
@@ -14,8 +13,8 @@ interface LogoProps {
 
 const Logo: React.FC<LogoProps> = ({ 
   className = '', 
-  width = 100,
-  height = 24,
+  width = 40,
+  height = 40,
   textSize = 'lg',
   showText = true 
 }) => {
@@ -32,9 +31,9 @@ const Logo: React.FC<LogoProps> = ({
 
   return (
     <div className={`flex items-center gap-2 ${className}`}>
-      <div style={{ height: `${height}px` }} className="w-auto relative">
+      <div style={{ height: `${height}px`, width: `${width}px` }} className="relative">
         <Image 
-          src={logoIcon}
+          src="/logos/PromptPilot_Logos-05.svg"
           alt="Prompt Pilot Logo - AI Trainingen voor Developers"
           width={width}
           height={height}
@@ -42,8 +41,7 @@ const Logo: React.FC<LogoProps> = ({
           priority={true}
           quality={100}
           loading="eager"
-          sizes="(max-width: 768px) 100px, 150px"
-          placeholder="blur"
+          sizes="(max-width: 768px) 40px, 40px"
         />
       </div>
       {showText && (
